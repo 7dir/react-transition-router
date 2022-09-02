@@ -1,0 +1,90 @@
+:root {
+  --main-bg-color: brown;
+}
+.container {
+  position: relative;
+}
+
+.navbar {
+  z-index: 20;
+}
+
+.page {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.offcanvas {
+  transition: transform 0.2s ease-in;
+  transform: translateX(100vw);
+  /* z-index: 50; */
+}
+.offcanvas-start {
+  transform: translateX(0);
+}
+
+.page2 {
+  position: absolute;
+  /* left: 15px; */
+  /* right: 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: min(100vh, 100%);
+  width: 100vw;
+  background-color: var(--main-bg-color);
+  /* margin-top: 0; */
+  z-index: 10;
+}
+
+.page2-enter {
+  margin-top: +100vh;
+  /* opacity: 0; */
+  /* transform: scale(1.1); */
+}
+
+.page2-enter-active {
+  /* opacity: 1; */
+  /* transform: scale(1); */
+  margin-top: 0;
+  /* transition: opacity 12000ms, transform 12000ms; */
+  transition: all 1000ms ease;
+}
+
+.page2-exit {
+  margin-top: 0;
+  /* opacity: 1; */
+  /* transform: scale(1); */
+}
+
+.page2-exit-active {
+  margin-top: -100vh;
+  /* opacity: 0; */
+  /* transform: scale(0.9); */
+  transition: all 1000ms ease;
+  /* , transform 2000ms, margin-top 2000ms; */
+}
